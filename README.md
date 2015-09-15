@@ -44,7 +44,7 @@ In Javascript, a collection refers to something which holds numerous values. Thi
 
 	*every - Returns true if all the values pass the truth test. If no iterator provided, provide a default one.
 
-	*some - Similar to every but, returns true if any values pass the truth test.
+	*some - Similar to every, but returns true if any values pass the truth test.
 	*contains - Evaluates a collection and returns true if value is present.
 
 	#####Advanced

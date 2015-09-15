@@ -3,7 +3,7 @@
 describe('Utilities', function() {
 	describe('identity', function() {
 		var newObject = {};
-
+		
 		it('should return whatever value it is passed', function() {
 		expect(library.identity(1)).to.equal(1);
 
