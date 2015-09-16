@@ -24,7 +24,19 @@ var library = (function(){
 			return odd;
 		},
 
-		reject : function(list, test) {},
+		reject : function(list, test) {
+			var even = [];
+			var odd = [];
+			for (var i = 0; i < list.length; i++) {
+				if (test(list[i]) === true) {
+					even.push(list[i]);
+				} else {
+					odd.push(list[i]);
+				}
+			}
+			return odd;
+			return even;
+		},
 
 		map : function(list, iterator) {},
 
@@ -102,7 +114,10 @@ var library = (function(){
 		difference : function(array) {},
 
 		// Functions --- Complete Functions Below
-		once : function(func) {},
+		once : function(func) {
+			var steve = true;
+			
+		},
 
 		memoize : function(func) {},
 
