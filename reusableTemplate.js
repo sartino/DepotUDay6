@@ -41,7 +41,7 @@ var library = (function(){
 		map : function(list, iterator) {
 			var odd = [];
 			for (var i = 0; i < list.length; i++) {
-				iterator(list[i]);
+
 				odd.push(iterator(list[i])); 
 			}
 			return odd;
@@ -52,7 +52,16 @@ var library = (function(){
 				return item[key];
 			});
 		},
-		reduce : function(list, iterator, accumulator) {},
+		reduce : function(list, iterator, accumulator) {
+			if (accumulator === undefined) {
+				accumulator = list[0];
+			}	
+			for (var i = 0; i < list.length; i++) {
+				accumulator = iterator(list[i],accumulator);
+
+			}
+			return accumulator;
+		},
 
 		every : function(list, iterator) {},
 
