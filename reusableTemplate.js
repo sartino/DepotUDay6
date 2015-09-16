@@ -38,7 +38,9 @@ var library = (function(){
 			return even;
 		},
 
-		map : function(list, iterator) {},
+		map : function(list, iterator) {
+			
+		},
 
 		pluck : function(list, key) {
 			return this.map(list, function(item){
@@ -116,6 +118,13 @@ var library = (function(){
 		// Functions --- Complete Functions Below
 		once : function(func) {
 			var steve = true;
+		return function () {
+			if (steve === true) {
+				steve = false;
+			} else {
+				func();
+			}
+		}
 			
 		},
 
