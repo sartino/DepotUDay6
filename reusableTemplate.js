@@ -39,7 +39,12 @@ var library = (function(){
 		},
 
 		map : function(list, iterator) {
-			
+			var odd = [];
+			for (var i = 0; i < list.length; i++) {
+				iterator(list[i]);
+				odd.push(iterator(list[i])); 
+			}
+			return odd;
 		},
 
 		pluck : function(list, key) {
