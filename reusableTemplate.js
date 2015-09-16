@@ -11,7 +11,17 @@ var library = (function(){
 		},
 
 		filter : function(list, test) {
-			
+			var even = [];
+			var odd = [];
+			for (var i = 0; i < list.length; i++) {
+				if (test(list[i]) === true) {
+					even.push(list[i]);
+				} else {
+					odd.push(list[i]);
+				}
+			}
+			return even;
+			return odd;
 		},
 
 		reject : function(list, test) {},
