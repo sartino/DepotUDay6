@@ -63,9 +63,34 @@ var library = (function(){
 			return accumulator;
 		},
 
-		every : function(list, iterator) {},
+		every : function(list, iterator) {
+			//2 `if's` and a `for`
+			var x = [];
+			var y = [];
+			for (var i = 0; i < list.length; i++) {
+				if (list[i] === true) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			return x;
+			return y;
+		},
 
-		some : function(list, iterator) {},
+		some : function(list, iterator) {
+			var x = [];
+			var y = [];
+			for (var i = 0; i < list.length; i++) {
+				if (list[i] === true) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			return x;
+			return y;
+		},
 
 		contains : function(list, target) {},
 
