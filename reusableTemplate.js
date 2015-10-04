@@ -72,6 +72,8 @@ var library = (function(){
 					return true;
 				} else {
 					return false;
+				} if (x = null) {
+					return false;
 				}
 			}
 			return x;
